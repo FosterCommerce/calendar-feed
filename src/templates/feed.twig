@@ -1,0 +1,30 @@
+{% for date in dates %}
+<li class="calendar-day">
+	<h3 class="date">
+		<time class="full">{{ date.dateLegible }}</time>
+		<time class="abbr" datetime="{{ date.dateFull }}">
+			<span class="weekday">{{ date.dayAb }}</span>
+			<span class="box">
+				<span class="month">{{ date.month }}</span>
+				<span class="day">{{ date.date }}</span>
+			</span>
+			<span class="year">{{ date.year }}</span>
+		</time>
+	</h3>
+	<ol class="calendar-events">
+    {% for event in date.events %}
+		<li class="event">
+			<a href="{{ event.link }}" target="_blank">
+				<h4 class="title">{{ event.summary }}</h4>
+				<div class="time">
+					<time datetime="{{ event.eventDateStr }}">{{ event.hour }}</time> -
+          {% if event.hour != event.endDateHour %}
+					<time datetime="{{ event.endDateStr }}">{{ event.endDateHour }}</time>
+          {% endif %}
+				</div>
+			</a>
+		</li>
+    {% endfor %}
+	</ol>
+</li>
+{% endfor %}

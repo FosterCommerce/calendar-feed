@@ -1,0 +1,26 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    label: 'Google Calendar ID'|t('calendar-feed'),
+    instructions: 'The Google Calendar ID of the calendar you want to pull events from, found in calendar settings.'|t('calendar-feed'),
+    id: 'googleCalendarId',
+    name: 'googleCalendarId',
+    value: settings['googleCalendarId'],
+    errors: settings.getErrors('googleCalendarId')})
+}}
+
+{{ forms.textField({
+    label: 'Developer Token'|t('calendar-feed'),
+    id: 'developerToken',
+    name: 'developerToken',
+    value: settings['developerToken'],
+    errors: settings.getErrors('developerToken')})
+}}
+
+{{ forms.textField({
+    label: 'Total events to display'|t('calendar-feed'),
+    id: 'totalEvents',
+    name: 'totalEvents',
+    value: settings['totalEvents'],
+    errors: settings.getErrors('totalEvents')})
+}}
