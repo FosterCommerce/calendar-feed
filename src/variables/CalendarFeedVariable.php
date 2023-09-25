@@ -7,7 +7,7 @@ use Craft;
 
 class CalendarFeedVariable
 {
-    public function feed()
+    public function feed() : String
     {
         $html = CalendarFeed::getInstance()->feed->getFeed();
         return $html;
