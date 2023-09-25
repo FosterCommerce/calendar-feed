@@ -37,7 +37,7 @@ class CalendarFeed extends Plugin
         );
     }
 
-    protected function createSettingsModel() : ?Model
+    protected function createSettingsModel() : ?Settings
     {
         return new Settings();
     }
