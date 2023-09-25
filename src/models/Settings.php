@@ -8,7 +8,7 @@ use craft\base\Model;
 
 class Settings extends Model
 {
-    public $googleCalendarId = null;
-    public $developerToken = null;
-    public $totalEvents = 10;
+    public ?string $googleCalendarId = null;
+    public ?string $developerToken = null;
+    public int $totalEvents = 10;
 }
