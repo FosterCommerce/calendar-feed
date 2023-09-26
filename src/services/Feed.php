@@ -16,7 +16,7 @@ class Feed extends Component
         $this->settings = CalendarFeed::getInstance()->settings;
     }
 
-    public function getFeed()
+    public function getFeed() : string
     {
         $client = new \Google_Client();
 		$client->setDeveloperKey($this->settings->developerToken); // TODO Get from settings

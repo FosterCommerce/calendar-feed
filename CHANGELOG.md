@@ -7,3 +7,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## 1.0.0 - 2019-10-17
 ### Added
 - Initial release
+
+## 2.0.0 - 2023-11-25
+
+### Added
+- Add return types for Craft 4 compatability
